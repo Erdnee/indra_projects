@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color changer</title>
+    <style>
+        body{
+            transition: background-color 0.4s ease-out;
+            display: flex;
+            min-height:100vh;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="changeColorBtn">Change Color</button>
+        <input id="colorInput" type="color">    
+        <button id="addColorBtn">Add color</button>
+    </div>
+    <script>
+        const changeColorBtn = document.getElementById("changeColorBtn");
+        const addColorBtn = document.getElementById("addColorBtn");
+        const colorInput = document.getElementById("colorInput");
+        
+        const myColors = []
+        let i = 0;
+        changeColorBtn.onclick = event => {
+            if(i == myColors.length){
+                document.body.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+                return;
+            }
+            document.body.style.backgroundColor = myColors[i]; 
+            i++;
+        }
+        addColorBtn.onclick = event => {
+            document.body.style.backgroundColor = colorInput.value;
+            if(!myColors.includes(colorInput.value)){
+                myColors.push(colorInput.value)
+            }
+        }
+    </script>
+</body>
+</html>
