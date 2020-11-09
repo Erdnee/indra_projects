@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class_toggle</title>
+    <style>
+        body{
+            margin:0;
+            min-height:100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .container{
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+        .div1{
+            background-color: green;
+            width:100px;
+            height:100px;
+        }
+        .div2{
+            background-color: aquamarine;
+            width:200px;
+            height:200px;
+        }
+        .div3{
+            background-color: darkcyan;
+            width:300px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleClassBtn">Toggle class</button>
+    <div class="container">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+    </div>
+    <script>
+        document.getElementById("toggleClassBtn").onclick = () => {
+            var div1 = document.querySelector(".div1");
+            var div2 = document.querySelector(".div2");
+            var div3 = document.querySelector(".div3");
+            var tempClassName = div1.className;
+            div1.className = div2.className;
+            div2.className = div3.className;
+            div3.className = tempClassName;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown timer</title>
+    <style>
+        body{
+            margin:0;
+            min-height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            background-color: aqua;
+            border-radius: 20px;
+            display:flex;
+            padding:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-display">
+            <input id="secondsInput" placeholder="seconds" type="number">
+            <button id="startBtn">Start</button>
+        </div>
+        <div class="output-display">
+            
+        </div>
+    </div>
+    <script>
+        let timeInSeconds = 0;
+        document.getElementById("startBtn").onclick = () => {
+            timeInSeconds = document.getElementById("secondsInput").value;
+            document.querySelector(".input-display").style.display = "none";
+            document.querySelector(".output.display").style.display = "block";
+        }
+    </script>
+</body>
+</html>
