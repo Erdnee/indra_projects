@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corgi site</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .left{
+            float:left;
+        }
+        header.brand-header{
+            border-bottom:3px solid black;
+        }
+        .brand{
+            text-align:center;
+            font-size:4rem;
+        }
+        .story{
+            border-right: 1px solid black;
+            padding: 0 10px;
+            height:100%;
+        }
+        .quarter{
+            width:25%;
+        }
+        .half{
+            width:50%;
+        }
+        .three-quarter{
+            width:75%;
+        }
+        .row{
+            width:100%;
+            height:570px;
+            border-left: 1px solid black;
+            border-bottom: 3px solid black;
+        }
+        .clear{
+            clear:both;
+        }
+        .row.little-row{
+            height:400px;
+        }
+        .section{
+            list-style-type: none;
+            width:100%;
+            height:20%;
+            font-size:2rem;
+            padding-left:2rem;
+        }
+        .section a{
+            text-decoration: none;
+            color:black;
+        }
+        .section a:hover{
+            text-decoration: underline;
+        }
+        .section-politics{
+            background-color: #ffeaa7;
+        }
+        .section-technology{
+            background-color: #81ecec;
+        }
+        .section-local{
+            background-color: #55efc4;
+        }
+        .section-opinion{
+            background-color: #74b9ff;
+        }
+        .section-sports{
+            background-color: #a29bfe;
+        }
+        .other-sections{
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <header class="brand-header">
+        <h1 class="brand">The News Times</h1>
+    </header>
+    <div class="row">
+        <div class="quarter story left">
+            <h1 class="article-title">Student Learns HTML</h1>
+            <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ad in quas alias non! Expedita similique et dolore illum doloremque vel accusantium ut eos tempora sequi, doloribus vitae mollitia praesentium ex ullam? Dolorem labore fugiat neque nostrum porro vero fugit.</p>
+            <p class="article-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam corrupti, eius odio neque incidunt esse fuga veritatis ipsum, eligendi mollitia, porro quasi provident nisi sit! Doloribus, eligendi nemo, ad laudantium cupiditate aspernatur eveniet asperiores modi praesentium voluptas eos sunt odio.</p>
+        </div>
+        <div class="half story left">
+            <h1 class="article-title">BREAKING: Puppies Are Adorable</h1>
+            <img width="100%" src="http://placecorgi.com/500/300" alt="corgi image">
+            <p class="article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, dolores? Illo dolores, rerum iste aut porro doloribus fugit itaque voluptas.</p>
+            <p class="article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium incidunt ullam ea magni ipsam perferendis ratione pariatur enim repellendus quia?</p>
+        </div>
+        <div class="quarter story left">
+            <h1 class="article-title">CSS Is Apparently a Thing</h1>
+            <p class="article-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ad in quas alias non! Expedita similique et dolore illum doloremque vel accusantium ut eos tempora sequi, doloribus vitae mollitia praesentium ex ullam? Dolorem labore fugiat neque nostrum porro vero fugit.</p>
+            <p class="article-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam corrupti, eius odio neque incidunt esse fuga veritatis ipsum, eligendi mollitia, porro quasi provident nisi sit! Doloribus, eligendi nemo, ad laudantium cupiditate aspernatur eveniet asperiores modi praesentium voluptas eos sunt odio.</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="row little-row">
+        <div class="quarter story left">
+            <h1 class="article-title">Boy Likes Turtles</h1>
+            <p class="article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, perferendis! Accusamus asperiores quod vitae architecto natus alias fugiat aliquam unde sint expedita repellat rerum, obcaecati hic placeat recusandae quaerat. Dolores excepturi earum minus magni! Animi aperiam eligendi molestias necessitatibus ducimus.</p>
+            <p class="article-text">Voluptate, ut, cupiditate ducimus vitae blanditiis ex impedit debitis est tempora dolores nam sed. Esse nobis ea inventore qui enim quia beatae ab commodi laboriosam quam aliquam aut perspiciatis fuga nam rerum temporibus voluptatum explicabo voluptate, pariatur ullam laudantium eligendi.</p>
+        </div>
+        <ul class="three-quarter story other-sections left">
+            <li class="section section-politics"><a href="#">Politics</a></li>
+            <li class="section section-technology"><a href="#">Technology</a></li>
+            <li class="section section-local"><a href="#">Local</a></li>
+            <li class="section section-opinion"><a href="#">Opinion</a></li>
+            <li class="section section-sports"><a href="#">Sports</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div >
+</body>
+</html>

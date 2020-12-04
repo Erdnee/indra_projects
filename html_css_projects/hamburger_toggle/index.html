@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger toggle</title>
+    <style>
+        body{
+            margin:0;
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hamburger-container{
+            width:200px;
+            height:150px;
+            background-color: rgb(230, 255, 255);
+            display:flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+        .hamburger-menu{
+            border-radius: 10px;
+            width:100%;
+            height:25%;
+            background-color: black;
+            transition: all 1s ;
+        }
+        .hamburger-container:hover .hamburger-menu{
+            background: transparent;
+        }
+        .hamburger-container:hover .hamburger-menu::before{
+            top:50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        .hamburger-container:hover .hamburger-menu::after{
+            top:50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .hamburger-menu::before, .hamburger-menu::after{
+            content: "";
+            border-radius: 10px;
+            position: absolute;
+            width:100%;
+            height:25%;
+            background-color: black;
+            transition: all 1s ;
+        }
+        .hamburger-menu::before{
+            top:0;
+        }
+        .hamburger-menu::after{
+            bottom:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger-container">
+        <div class="hamburger-menu"></div>
+    </div>
+    
+</body>
+</html>

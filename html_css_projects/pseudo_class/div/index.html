@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class DIV</title>
+    <style>
+        p{
+            background-color: whitesmoke;
+            margin:0;
+            padding:10px;
+            display:inline-block;
+            cursor: pointer;
+        }
+        p:first-child:hover::before{
+            content:"1st child ";
+            color:rgb(255, 178, 10);
+        }
+        p:nth-child(even):hover::after{
+            content:" even child";
+            color:rgb(255, 65, 239);
+        }
+        p:nth-child(odd):hover::after{
+            content:" odd child";
+            color:green;
+        }
+        p:last-child:hover::before{
+            content:"last child ";
+            color:red;
+        }
+        p:hover{
+            color:rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div class="texts">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+        <p>Four</p>
+        <p>Five</p>
+    </div>
+</body>
+</html>

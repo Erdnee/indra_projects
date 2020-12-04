@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform, Transition, Animation</title>
+    <style>
+        body{
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height:100vh;
+        }
+        div{
+            width:100px;
+            height:100px;
+            background-color: rgb(255, 255, 0);
+            /* animation-name: change-color;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-direction: alternate;
+            animation-play-state: paused; */
+            animation:change-color 2s ease-in-out infinite alternate paused;
+        }
+        div:hover{
+            animation-play-state: running;
+        }
+        @keyframes change-color {
+            0%{
+                background-color: yellow;
+            }   
+            25%{
+                background-color: green;
+            }
+            50%{
+                background-color: hotpink;
+            }
+            75%{
+                background-color: indigo;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

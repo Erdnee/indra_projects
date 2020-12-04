@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+</head>
+<body>
+    <img src="https://image.shutterstock.com/image-photo/white-transparent-leaf-on-mirror-260nw-1029171697.jpg" alt="">
+    <script>
+        const img = document.querySelector("img");
+        let isRunning = true;
+        img.onclick = function(){
+            if(isRunning) clearTimeout(timeoutId)
+            else changeImgSrc()
+        isRunning = !isRunning;
+        }
+        const myImgArray = ["https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg","https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png","https://image.shutterstock.com/image-photo/white-transparent-leaf-on-mirror-260nw-1029171697.jpg"]
+        var i = 0;
+        var timeoutId;
+        function changeImgSrc(){
+            img.src = myImgArray[i];
+            i++;
+            if(i == myImgArray.length)i = 0;
+            timeoutId = setTimeout(changeImgSrc,1000)
+        }
+        changeImgSrc()
+    </script>
+</body>
+</html>

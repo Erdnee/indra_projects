@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal pop up</title>
+</head>
+
+<body>
+    <aside id="modal" class="modal">
+        <section>
+            <header>
+                <h2>Are you sure you want to delete?</h2>
+            </header>
+            <section>
+                <p>This action cannot be undone</p>
+            </section>
+            <footer>
+                <button class="modal__btn-cancel">Cancel</button>
+                <button class="modal__btn-delete">Delete</button>
+            </footer>
+        </section>
+    </aside>
+    <button id="delete">Delete</button>
+    <script>
+        document.getElementById("delete").onclick = function(){
+            document.getElementById("modal").classList.add("modal--open");
+        };
+        document.getElementById("modal").onclick = function(event){
+            event.target
+        }
+    </script>
+</body>
+
+</html>

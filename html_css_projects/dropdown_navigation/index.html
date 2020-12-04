@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+    <style>
+        body{
+            margin:0;
+        }
+        nav{
+            display:flex;
+            font-size:1.25rem;
+            background-color: rgb(203, 240, 255);   
+        }
+        .nav-item{
+            padding:1rem;
+        }
+        .nav-item:hover{
+            background-color: rgb(107, 201, 255);
+            cursor: pointer;
+        }
+        .dropdown{
+            position: relative;
+        }
+        .dropdown:hover .dropdown__menu{
+            display:block;
+        }
+        .dropdown__menu{
+            background-color: rgb(203, 240, 255);
+            display:none;
+            position:absolute;
+            top:100%;
+            left:0;
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-item">Home</div>
+        <div class="nav-item">Contact</div>
+        <div class="nav-item dropdown">Dropdown
+            <div class="dropdown__menu">
+                <div class="nav-item">Item</div>
+                <div class="nav-item">Item</div>
+                <div class="nav-item">Item</div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

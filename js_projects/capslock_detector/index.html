@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capslock detector</title>
+    <link href="https://css.gg/css?=|eye-alt|eye" rel="stylesheet">
     <style>
-        #container{
-            width:100px;
+        #container {
+            width: fit-content;
         }
-        #caps-input{
-            
+
+        .capslock-warning {
+            text-align: center;
+            width: 100%;
+            color: rgba(0, 0, 0, 0);
+            transition: color 0.3s ease-in;
+        }
+
+        .capslock-warning.capslock-on {
+            color: rgba(0, 0, 0, 1)
+        }
+        .gg-eye, .gg-eye-alt{
+            float:right;
+            margin-left:5px;
         }
     </style>
 </head>
+
 <body>
     <div id="container">
-        <input id="caps-input" type="text">
-        <div id="detector"></div>
+        <input id="caps-input" type="password"><i id="eyeLogo" class="gg-eye"></i>
+         <div class="capslock-warning">Capslock is ON</div>
+
     </div>
+    <script>
+        document.querySelector("#eyeLogo").addEventListener("mouseenter",() => {
+            event.target.className = "gg-eye-alt";
+        })
+        document.querySelector("#eyeLogo").addEventListener("mouseleave",() => {
+            event.target.className = "gg-eye";
+        })
+        document.querySelector("#eyeLogo").addEventListener("click",() => {
+            if(document.getElementById("caps-input").type != "password"){
+                document.getElementById("caps-input").type = "password"
+            }
+            else{
+                document.getElementById("caps-input").type = "text";
+            }
+        })
+        function isCapsLockOn(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            var shiftKey = e.shiftKey ? e.shiftKey : ((keyCode == 16) ? true : false);
+            return (((keyCode >= 65 && keyCode <= 90) && !shiftKey) || ((keyCode >= 97 && keyCode <= 122) && shiftKey))
+        }
+
+        function showCapsLockMsg() {
+            var e = window.event;
+            console.log(e)
+            if (isCapsLockOn(e))
+                document.querySelector(".capslock-warning").classList.add("capslock-on");
+            else
+                document.querySelector(".capslock-warning").classList.remove("capslock-on");
+        }
+
+        document.onkeypress = function (e) {
+            e = e || window.event;
+            showCapsLockMsg(e);
+        }
+        document.getElementById("caps-input").onkeyup = e => {
+            if (e.getModifierState("CapsLock")) {
+                document.querySelector(".capslock-warning")
+            }
+            else {
+
+            }
+        }
+    </script>
 </body>
+
 </html>

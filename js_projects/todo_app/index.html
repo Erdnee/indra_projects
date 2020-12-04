@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO app</title>
+    <style>
+        :root {
+            font-size: 1.2rem;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            border-radius: 10px;
+            background-color: #03a9f4;
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .input {
+            margin:20px;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .input input{
+            font-size:1.2rem;
+        }
+        .output {
+            overflow-y: scroll;
+            max-height: 250px;
+            scrollbar-width: none;
+        }
+
+        /* .output::-webkit-scrollbar {
+            display: none;
+        } */
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* button */
+        ::-webkit-scrollbar-button {
+            background: #222;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #666;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        /* The track NOT covered by the handle.
+::-webkit-scrollbar-track-piece {
+    background: #000; 
+}
+
+/* Corner */
+        ::-webkit-scrollbar-corner {
+            background: #999;
+        }
+
+        /* Resizer */
+        ::-webkit-resizer {
+            background: #111;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+
+        .item-text {
+            display: inline-block;
+            vertical-align: middle;
+            max-width:100px;
+            word-wrap:break-word;
+        }
+
+        button {
+            width: 2rem;
+            height: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text">
+            <button>+</button>
+        </div>
+        <div class="output">
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummyasfasfkaflkfjklasjfklj sdflkjasdlkjadslfkjalsdkjasdlkfjasdklfj text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+            <div class="todo-item">
+                <div class="item-text">Dummy text</div>
+                <button>-</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // contenteditable="true" 
+        // document.querySelector(".item-text").setAttribute("contenteditable",true);
+    </script>
+</body>
+
+</html>

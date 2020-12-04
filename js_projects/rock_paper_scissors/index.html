@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissors</title>
+</head>
+<body>
+    <div>Win: <span id="win"></span></div>
+    <div>Lose: <span id="lose"></span> </div>
+    <div>Draw: <span id="draw"></span></div>
+    <div>Player: <span id="playerState"></span></div> 
+    <div>Cpu: <span id="cpuState"></span></div>
+    <div id="result"></div>
+    <button id="rock">ROCK</button>
+    <button id="paper">PAPER</button>
+    <button id="scissors">SCISSORS</button>
+    <script>
+        let winCount = 0,loseCount = 0, drawCount = 0;
+        const buttons = document.querySelectorAll("button");
+        for(let i = 0; i < buttons.length; i++){
+            buttons[i].onclick = game;
+        }
+        function game( event ){
+            const playerState = event.target.id;
+            const cpuState = randomState();
+            // console.log(`playerState:${playerState}`);
+            // console.log(`cpuState:${cpuState}`);
+            if(playerState == cpuState){
+                // console.log("DRAW!");
+                text = "DRAW!";
+                drawCount++;
+            }
+            else if((playerState == "rock" && cpuState == "scissors") || (playerState == "scissors" && cpuState == "paper") || (playerState == "paper" && cpuState == "rock")){
+                // console.log("WON!");
+                text = "WON!";
+                winCount++;
+            }
+            else if((cpuState == "rock" && playerState == "scissors") || (cpuState == "scissors" && playerState == "paper") || (cpuState == "paper" && playerState == "rock")){
+                // console.log("LOST!");
+                text = "LOST!";
+                loseCount++;
+            }
+            updateDOM(playerState, cpuState, text)
+        }
+        function updateDOM(playerState, cpuState){
+            document.getElementById("win").innerText = winCount;
+            document.getElementById("lose").innerText = loseCount;
+            document.getElementById("draw").innerText = drawCount;
+            document.getElementById("playerState").innerText = playerState;
+            document.getElementById("cpuState").innerText = cpuState;
+            document.getElementById("result").innerText = text;
+        }
+        function randomState(){
+            const myState = ["rock", "paper","scissors"];
+            return myState[Math.floor( Math.random() * 3 )];
+        }
+    </script>
+</body>
+</html>

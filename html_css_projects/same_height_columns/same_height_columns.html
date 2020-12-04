@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same height columns</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            margin:0;
+        }
+        .container{
+            width:50%;
+            min-height:500px;
+            display: flex;
+            background-color: blueviolet;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .flex-item{
+            width:30%;
+            height:480px;
+            background-color: yellow;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-item">
+            <h1>Column 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="flex-item">
+            <h1>Column 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, felis id varius ornare, lacus tellus luctus sapien, sed elementum risus sem at turpis. Integer vulputate risus vel ex ultricies, quis ornare purus euismod. Sed hendrerit, nulla sit amet dignissim accumsan, sem nisi consequat risus, ac aliquet neque dui ut leo. Ut metus elit, sodales et sem et, vestibulum fringilla metus. Pellentesque convallis dapibus neque quis imperdiet. Vivamus ac metus pellentesque, tristique eros ac, porttitor nulla. Nam id mauris quis nulla blandit tincidunt.</p>
+        </div>
+        <div class="flex-item">
+            <h1>Column 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, felis id varius ornare, lacus tellus luctus sapien, sed elementum risus sem at turpis. </p>
+        </div>
+    </div>
+
+</body>
+</html>

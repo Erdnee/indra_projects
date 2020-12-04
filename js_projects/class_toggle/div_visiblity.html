@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV visibility</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color: aquamarine;
+            float:left;
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div-1"></div>
+    <div id="div-2"></div>
+    <div id="div-3"></div>
+    <button>Click me!</button>
+    <script>
+        let clickCount = 0;
+        document.querySelector("button").onclick = function(){
+            clickCount++;// clickCount = clickCount + 1;
+            if(clickCount % 4 == 1){
+                document.getElementById("div-1").style.visibility = "hidden";
+            }
+            else if(clickCount % 4 == 2){
+                document.getElementById("div-2").style.visibility = "hidden";
+                document.getElementById("div-1").style.visibility = "visible";
+            }
+            else if(clickCount % 4 == 3){
+                document.getElementById("div-3").style.visibility = "hidden";
+                document.getElementById("div-2").style.visibility = "visible";
+            }
+            else if(clickCount % 4 == 0){
+                document.getElementById("div-1").style.visibility = "visible";
+                document.getElementById("div-2").style.visibility = "visible";
+                document.getElementById("div-3").style.visibility = "visible";
+            }
+        }
+    </script>
+</body>
+</html>
