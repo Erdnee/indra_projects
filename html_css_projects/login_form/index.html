@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amjilt Login</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            min-height: 100vh;
+            background:transparent radial-gradient(closest-side at 50% 50%, #8EC9F4 0%, #1890FB 100%) 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: clamp(400px,32%,90%);
+            background-color: rgba(255, 255, 255, 0.6);
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            position:relative;
+            min-height: 70vh;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px #00000029;
+        }
+        .lang-container .lang ion-icon{
+            position:absolute;
+            left:8px;
+        }
+        .logo{
+            width:60%;
+            margin:40px 0;
+        }
+        .input-form{
+            width:80%;
+            color: #777;
+        }
+        .input-form > * {
+            margin-bottom:20px;
+        }
+        .input-box, .login-button{
+            width:100%;
+        }
+        .input-box{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 3px 3px 6px #00000040;
+        }
+        .input-box ion-icon{
+            font-size: 1.5rem;
+            margin:1rem;
+            position: absolute;
+            left: 0px;
+        }
+        .input-box ion-icon[name="eye"] {
+            right:0;
+            left:unset;
+        }
+        .input-box input:focus{
+            outline:none;
+        }
+        .input-box input{
+            border: none;
+            font-size:14px;
+            padding:1em 0;
+            background: transparent;
+            width: 68%;
+        }
+        .login-button{
+            padding:0.5rem 0;
+            font-size: 1.3rem;
+            color:#fff;
+            border-radius: 7px;
+            border-color: transparent;
+            background-color: #1890ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 6px #00000040;
+        }
+        .forgot-password{
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            color:#1890ff;
+        }
+        .lang-container{
+            width: 60%;
+            display:flex;
+            justify-content:space-evenly;
+            position: absolute;
+            bottom: 98%;
+            column-gap: 20%;
+        }
+        .lang-container .lang{
+            color: #1890ff;
+            background: #fff;
+            padding: 0.5rem;
+            border-radius: 5px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .download-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            top: 94%;
+            position: absolute;
+        }
+        .download-container .download-box{
+            background-color: white;
+            color: #1c8efa;
+            padding: 0.5rem 1rem;
+            flex: 1;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-container">
+            <div class="lang">
+                <ion-icon name="checkmark-outline"></ion-icon>
+            MNG
+            </div>
+            <div class="lang">
+            EN
+            </div>
+        </div>
+        <img class="logo" src="https://indra.amjilt.com/imagesSchool/logo-school.png" alt="Amjilt logo">
+        <div class="input-form">
+            <div class="input-box">
+                <ion-icon name="person"></ion-icon>
+                <input placeholder="Нэвтрэх нэр" type="text" class="input">
+            </div>
+            <div class="input-box">
+                <ion-icon name="key"></ion-icon>
+                <input placeholder="Нууц үг ..." type="text" class="input">
+                <ion-icon name="eye"></ion-icon>
+            </div>
+            <button class="login-button">Нэвтрэх</button>
+        </div>
+        <div class="download-container">
+            <div class="download-box">
+            Appstore-с татах
+            </div>
+            <div class="download-box">
+            Playstore-с татах
+            </div>
+        </div>
+        <div class="forgot-password">Нууц үг мартсан?</div>
+    </div>
+</body>
+</html>
